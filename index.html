@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Calculadora de Puntos de Función</h1>
-    
+
     <label>Selecciona el tipo de función:</label>
-    <select id="tipo">                        
+    <select id="tipo">
         <option value="baja">Baja</option>
         <option value="media">Media</option>
         <option value="alta">Alta</option>
     </select>
-    
-        <div>
-            <label>Entradas externas</label>
-            <input type="number" id="ex">
-            <label>Salidas externas</label>
-            <input type="number" id="sx">
-            <label>Cosultas</label>
-            <input type="number" id="consultas">
-            <label>Archivos externos</label>
-            <input type="number" id="ax">
-            <label>Archivos internos</label>
-            <input type="number" id="ai">
-        </div>
-        <button onclick="valorDeFuncionTotal()">Calcular Puntos de Función</button>
+
+    <div>
+        <label>Entradas externas</label>
+        <input type="number" id="ex">
+        <label>Salidas externas</label>
+        <input type="number" id="sx">
+        <label>Cosultas</label>
+        <input type="number" id="consultas">
+        <label>Archivos externos</label>
+        <input type="number" id="ax">
+        <label>Archivos internos</label>
+        <input type="number" id="ai">
+    </div>
+    <button onclick="valorDeFuncionTotal()">Calcular Puntos de Función</button>
 
     <p id="resultado">Resultados:</p>
-<!-- preguntas -->
+    <!-- preguntas -->
 
     <div>
         <div>
@@ -177,7 +179,7 @@
             </select>
         </div>
         <div>
-            <label>pregunta 14: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <label>pregunta 14: ¿El sistema requiere respaldo y recuperacion confiable?</label>
             <select id="P14">
                 <option value=0>0</option>
                 <option value=1>1</option>
@@ -191,6 +193,21 @@
         <button onclick="preguntas()">enviar</button>
     </div>
 
-    <script src="./script.js"></script>    
+    <h4>Posible interpretación de complejidad</h4>
+
+    <div>
+        <h2>Cálculo del esfuerzo horas/persona</h2>
+        <div>
+            <label>¿De cuántas horas es la jornada de trabajo?</label>
+            <input type="number" id="horas_por_jornada"><br>
+            <label>¿Cuántas personas hay en el equipo de trabajo?</label>
+            <input type="number" id="personas_en_equipo"><br>
+            <label>¿Cuántos meses tardó en desarrollarse el proyecto?</label>
+            <input type="number" id="meses_desarrollo_proyecto">
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>
