@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de Puntos de Función</h1>
+    
+    <label>Selecciona el tipo de función:</label>
+    <select id="tipo">                        
+        <option value="baja">Baja</option>
+        <option value="media">Media</option>
+        <option value="alta">Alta</option>
+    </select>
+    
+        <div>
+            <label>Entradas externas</label>
+            <input type="number" id="ex">
+            <label>Salidas externas</label>
+            <input type="number" id="sx">
+            <label>Cosultas</label>
+            <input type="number" id="consultas">
+            <label>Archivos externos</label>
+            <input type="number" id="ax">
+            <label>Archivos internos</label>
+            <input type="number" id="ai">
+        </div>
+        <button onclick="valorDeFuncionTotal()">Calcular Puntos de Función</button>
+
+    <p id="resultado">Resultados:</p>
+<!-- preguntas -->
+
+    <div>
+        <div>
+            <label>pregunta 1: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P1">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 2: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P2">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 3: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P3">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 4: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P4">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 5: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P5">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 6: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P6">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 7: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P7">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 8: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P8">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 9: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P9">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 10: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P10">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 11: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P11">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 12: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P12">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 13: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P13">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+        <div>
+            <label>pregunta 14: ¿Wl sistema requiere respaldo y recuperacion confiable?</label>
+            <select id="P14">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+        </div>
+
+        <button onclick="preguntas()">enviar</button>
+    </div>
+
+    <script src="./script.js"></script>    
+</body>
+</html>
