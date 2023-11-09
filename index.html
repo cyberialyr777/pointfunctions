@@ -193,7 +193,7 @@
         <button onclick="preguntas()">enviar</button>
     </div>
 
-    <h4>Posible interpretación de complejidad</h4>
+    <h4 id="resultado_preguntas">Posible interpretación de complejidad:</h4>
 
     <div>
         <h2>Cálculo del esfuerzo horas/persona</h2>
@@ -202,9 +202,13 @@
             <input type="number" id="horas_por_jornada"><br>
             <label>¿Cuántas personas hay en el equipo de trabajo?</label>
             <input type="number" id="personas_en_equipo"><br>
-            <label>¿Cuántos meses tardó en desarrollarse el proyecto?</label>
-            <input type="number" id="meses_desarrollo_proyecto">
+            <label>¿Cuántas horas al mes tardó en desarrollarse el proyecto?</label>
+            <input type="number" id="horas_desarrollo_proyecto">
         </div>
+        <button onclick="horas_de_trabajo()">enviar</button>
+        <p id="horas_por_persona">Horas por persona:</p>
+        <p id="resultado">Resultados:</p>
+        <p id="resultado">Resultados:</p>
     </div>
 
     <script src="./script.js"></script>
