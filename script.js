@@ -1,7 +1,7 @@
 const boton = document.getElementById("boton");
 const boton2 = document.getElementById("boton2");
 
-let valorDeFuncion = 0, formula_PFA;function valorDeFuncionTotal() {
+let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   const tipo = document.getElementById("tipo").value;
   const ex = document.getElementById("ex").value;
   let sx = document.getElementById("sx").value;
