@@ -1,17 +1,14 @@
 const boton = document.getElementById("boton");
 const boton2 = document.getElementById("boton2");
 
-let valorDeFuncion = 0;
-
-function valorDeFuncionTotal() {
+let valorDeFuncion = 0, formula_PFA;function valorDeFuncionTotal() {
   const tipo = document.getElementById("tipo").value;
   const ex = document.getElementById("ex").value;
   let sx = document.getElementById("sx").value;
   let consultas = document.getElementById("consultas").value;
   let ax = document.getElementById("ax").value;
   let ai = document.getElementById("ai").value;
-  let factor = 0,
-    puntos_de_funcion = 0;
+  let factor = 0;
   let lista = [ex, sx, consultas, ax, ai];
   console.log(lista);
 
@@ -24,23 +21,11 @@ function valorDeFuncionTotal() {
   }
 
   for (let i = 0; i < lista.length; i++) {
-    puntos_de_funcion += lista[i] * factor[i];
+    valorDeFuncion += lista[i] * factor[i];
   }
-
-  document.getElementById(
-    "resultado"
-  ).textContent = `Puntos de Función: ${puntos_de_funcion}`;
-}
-
-function guardar_valor_deFuncion(puntos_de_funcion) {
-  valorDeFuncion = puntos_de_funcion;
-}
-
-let resultado_PFA = 0;
-
-function preguntas() {
-  let formula_FI = 0,
-    formula_PFA = 0;
+  console.log(valorDeFuncion);
+  document.getElementById("resultado").textContent = `Puntos de Función: ${valorDeFuncion}`;}function preguntas() {
+  let formula_FI = 0;
   const P1 = document.getElementById("P1").value;
   const P2 = document.getElementById("P2").value;
   const P3 = document.getElementById("P3").value;
@@ -67,29 +52,17 @@ function preguntas() {
   for (x = 0; x < enteros.length; x++) {
     formula_FI += enteros[x];
   }
-  // console.log(FI);
+  console.log(formula_FI);
+  console.log(valorDeFuncion);
   formula_PFA = valorDeFuncion * (0.65 + 0.01 * formula_FI);
-  // console.log(PFA);
-  document.getElementById(
-    "resultado_preguntas"
-  ).textContent = `Posible interpretación de complejidad: ${formula_PFA}`;
-}
-
-function guardar_valor_PFA(formula_PFA) {
-  resultado_PFA = formula_PFA;
-}
-
-function horas_de_trabajo() {
+  console.log(formula_PFA);
+  document.getElementById("resultado_preguntas").textContent = `Posible interpretación de complejidad: ${formula_PFA}`;}function horas_de_trabajo() {
   let horas_por_jornada = document.getElementById("horas_por_jornada").value;
   let personas_en_equipo = document.getElementById("personas_en_equipo").value;
-  let horas_desarrollo_proyecto = document.getElementById(
-    "horas_desarrollo_proyecto"
-  ).value;
-  let horas_persona = 0,
-    duracion_proyecto = 0,
-    duracion_meses = 0;
+  let horas_desarrollo_proyecto = document.getElementById("horas_desarrollo_proyecto").value;
+  let horas_persona = 0, duracion_proyecto = 0, duracion_meses = 0;
 
-  horas_persona = resultado_PFA / (1 / horas_por_jornada);
+  horas_persona = formula_PFA / (1 / horas_por_jornada);
   duracion_proyecto = horas_persona / personas_en_equipo;
   duracion_meses = duracion_proyecto / horas_desarrollo_proyecto;
 
@@ -97,26 +70,16 @@ function horas_de_trabajo() {
   console.log(duracion_proyecto);
   console.log(duracion_meses);
 
-  document.getElementById(
-    "horas_por_persona"
-  ).textContent = `Horas por persona: ${horas_persona}`;
-  document.getElementById(
-    "resultados"
-  ).textContent = `Horas por persona: ${horas_persona}`;
-  document.getElementById(
-    "resultados"
-  ).textContent = `Horas por persona: ${horas_persona}`;
+  document.getElementById("horas_por_persona").textContent = `Horas por persona: ${horas_persona}`;
+  document.getElementById("p_e").textContent = `Horas: ${duracion_proyecto}`;
+  document.getElementById("h_d_p").textContent = `Horas por persona: ${duracion_meses}`;
 }
 
-// Declare a global variable
-// let globalVariable = 0;
 
-// // Define a function that saves data to the global variable
-// function saveData(data) {
-//   globalVariable = data;
+// function guardar_valor_deFuncion(puntos_de_funcion) {
+//   valorDeFuncion = puntos_de_funcion;
 // }
 
-// // Define a function that retrieves data from the global variable
-// function getData() {
-//   return globalVariable;
-// }
+
+
+// let resultado_PFA = 0;
