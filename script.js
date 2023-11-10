@@ -54,25 +54,35 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   }
   console.log(formula_FI);
   console.log(valorDeFuncion);
-  formula_PFA = valorDeFuncion * (0.65 + 0.01 * formula_FI);
+  formula_PFA = Math.round(valorDeFuncion * (0.65 + 0.01 * formula_FI));
   console.log(formula_PFA);
+  if(formula_PFA <= 100){
+    document.getElementById("interpretacion").textContent = 'interpretación de complejidad: se considera de complejidad sencilla';
+  }else if(formula_PFA >= 101 && formula_PFA <= 300){
+    document.getElementById("interpretacion").textContent = 'interpretación de complejidad: se considera de complejidad media';
+  }else if(formula_PFA >= 301 && formula_PFA <= 500){
+    document.getElementById("interpretacion").textContent = 'interpretación de complejidad: se considera de complejidad dificil';
+  }else{
+    document.getElementById("interpretacion").textContent = 'fuera del ragon para la interpretacion de complejidad'
+  }
+
   document.getElementById("resultado_preguntas").textContent = `Posible interpretación de complejidad: ${formula_PFA}`;}function horas_de_trabajo() {
   let horas_por_jornada = document.getElementById("horas_por_jornada").value;
   let personas_en_equipo = document.getElementById("personas_en_equipo").value;
   let horas_desarrollo_proyecto = document.getElementById("horas_desarrollo_proyecto").value;
   let horas_persona = 0, duracion_proyecto = 0, duracion_meses = 0;
 
-  horas_persona = formula_PFA / (1 / horas_por_jornada);
-  duracion_proyecto = horas_persona / personas_en_equipo;
-  duracion_meses = duracion_proyecto / horas_desarrollo_proyecto;
+  horas_persona = Math.round(formula_PFA / (1 / horas_por_jornada));
+  duracion_proyecto = Number((horas_persona / personas_en_equipo).toFixed(2));
+  duracion_meses = (duracion_proyecto / horas_desarrollo_proyecto);
 
   console.log(horas_persona);
   console.log(duracion_proyecto);
   console.log(duracion_meses);
 
-  document.getElementById("horas_por_persona").textContent = `Horas por persona: ${horas_persona}`;
-  document.getElementById("p_e").textContent = `Horas: ${duracion_proyecto}`;
-  document.getElementById("h_d_p").textContent = `Horas por persona: ${duracion_meses}`;
+  document.getElementById("horas_por_persona").textContent = `Horas por persona: ${(horas_persona)}`;
+  document.getElementById("horas_proyecto").textContent = `Horas del proyecto: ${duracion_proyecto}`;
+  document.getElementById("duracion_proyecto").textContent = `Duracion en dias: ${duracion_meses}`;
 }
 
 
