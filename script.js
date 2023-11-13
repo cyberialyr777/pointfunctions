@@ -86,16 +86,7 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
 }
 
 
-// function guardar_valor_deFuncion(puntos_de_funcion) {
-//   valorDeFuncion = puntos_de_funcion;
-// }
-
-
-
-// let resultado_PFA = 0;
-
-
-
+////
 document.addEventListener('DOMContentLoaded', function () {
   const questions = document.querySelectorAll('.pregunta');
   let currentQuestion = 0;
@@ -129,11 +120,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function preguntas() {
-    // Lógica de procesamiento de preguntas aquí (si es necesario)
     nextQuestion(); // Muestra la siguiente pregunta al hacer clic en "enviar"
   }
 
-  // Agregamos eventos a los botones
   document.getElementById('siguiente').addEventListener('click', function () {
     nextQuestion();
   });
