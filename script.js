@@ -93,3 +93,55 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
 
 
 // let resultado_PFA = 0;
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const questions = document.querySelectorAll('.pregunta');
+  let currentQuestion = 0;
+
+  function showQuestion(index) {
+    questions.forEach((question, i) => {
+      if (i === index) {
+        question.style.display = 'block';
+      } else {
+        question.style.display = 'none';
+      }
+    });
+  }
+
+  function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      showQuestion(currentQuestion);
+    } else {
+      currentQuestion = questions.length - 1;
+    }
+  }
+
+  function prevQuestion() {
+    currentQuestion--;
+    if (currentQuestion >= 0) {
+      showQuestion(currentQuestion);
+    } else {
+      currentQuestion = 0;
+    }
+  }
+
+  function preguntas() {
+    // Lógica de procesamiento de preguntas aquí (si es necesario)
+    nextQuestion(); // Muestra la siguiente pregunta al hacer clic en "enviar"
+  }
+
+  // Agregamos eventos a los botones
+  document.getElementById('siguiente').addEventListener('click', function () {
+    nextQuestion();
+  });
+
+  document.getElementById('anterior').addEventListener('click', function () {
+    prevQuestion();
+  });
+
+  showQuestion(currentQuestion);
+});
+
