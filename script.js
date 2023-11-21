@@ -2,15 +2,24 @@ const boton = document.getElementById("boton");
 const boton2 = document.getElementById("boton2");
 
 let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
-  const tipo = document.getElementById("tipo").value;
-  const ex = document.getElementById("ex").value;
+  let tipo = document.getElementById("tipo").value;
+  let ex = document.getElementById("ex").value;
   let sx = document.getElementById("sx").value;
   let consultas = document.getElementById("consultas").value;
   let ax = document.getElementById("ax").value;
   let ai = document.getElementById("ai").value;
-  let factor = 0;
+  let factor = 0, valorDeFuncion2 = 0;
   let lista = [ex, sx, consultas, ax, ai];
   console.log(lista);
+
+  if (ex.trim() === '' || sx.trim() === '' || consultas.trim() === '' || ax.trim() === '' || ai.trim() === '') {
+    // Mostrar un mensaje de error si algún campo está vacío
+    document.getElementById('validar').innerText = 'Por favor, complete todos los campos.';
+    // Detener la ejecución de la función
+    return;
+  }
+
+  document.getElementById('validar').innerText = '';
 
   if (tipo === "baja") {
     factor = [3, 4, 3, 7, 5];
@@ -21,9 +30,14 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   }
 
   for (let i = 0; i < lista.length; i++) {
-    valorDeFuncion += lista[i] * factor[i];
+    valorDeFuncion2 += lista[i] * factor[i];
   }
+  
+  valorDeFuncion = valorDeFuncion2;
+  valorDeFuncion2 = 0;
+
   console.log(valorDeFuncion);
+  console.log(valorDeFuncion2);
   document.getElementById("resultado").textContent = `Puntos de Función: ${valorDeFuncion}`;}function preguntas() {
   let formula_FI = 0;
   const P1 = document.getElementById("P1").value;
@@ -71,6 +85,15 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   let personas_en_equipo = document.getElementById("personas_en_equipo").value;
   let horas_desarrollo_proyecto = document.getElementById("horas_desarrollo_proyecto").value;
   let horas_persona = 0, duracion_proyecto = 0, duracion_meses = 0;
+
+  if (horas_por_jornada.trim() === '' || personas_en_equipo.trim() === '' || horas_desarrollo_proyecto.trim() === '') {
+    // Mostrar un mensaje de error si algún campo está vacío
+    document.getElementById('validar2').innerText = 'Por favor, complete todos los campos.';
+    // Detener la ejecución de la función
+    return;
+  }
+
+  document.getElementById('validar2').innerText = '';
 
   horas_persona = Math.round(formula_PFA / (1 / horas_por_jornada));
   duracion_proyecto = Number((horas_persona / personas_en_equipo).toFixed(2));
