@@ -7,6 +7,8 @@ function empezar() {
     modulo1.classList.add('mostrar');
   }
   
+  window.onload = empezar;
+
   function siguienteModulo(numeroModulo) {
     const moduloActual = document.getElementById(`modulo${numeroModulo - 1}`);
     const siguienteModulo = document.getElementById(`modulo${numeroModulo}`);

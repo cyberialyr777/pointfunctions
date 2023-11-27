@@ -3,7 +3,7 @@ const boton2 = document.getElementById("boton2");
 
 //aver si sale lo de arriba
 
-let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
+let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal(numeroModulo) {
   let tipo = document.getElementById("tipo").value;
   let ex = document.getElementById("ex").value;
   let sx = document.getElementById("sx").value;
@@ -40,7 +40,19 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
 
   console.log(valorDeFuncion);
   console.log(valorDeFuncion2);
-  document.getElementById("resultado").textContent = `Puntos de Función: ${valorDeFuncion}`;}function preguntas() {
+
+
+  const moduloActual = document.getElementById(`modulo${numeroModulo - 1}`);
+  const siguienteModulo = document.getElementById(`modulo${numeroModulo}`);
+  
+  moduloActual.classList.remove('mostrar');
+  moduloActual.classList.add('oculto');
+  
+  siguienteModulo.classList.remove('oculto');
+  siguienteModulo.classList.add('mostrar');
+
+
+  document.getElementById("resultado").textContent = `Puntos de Función: ${valorDeFuncion}`;}function preguntas(numeroModulo) {
   let formula_FI = 0;
   const P1 = document.getElementById("P1").value;
   const P2 = document.getElementById("P2").value;
@@ -82,7 +94,17 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
     document.getElementById("interpretacion").textContent = 'fuera del rango para la interpretacion de complejidad'
   }
 
-  document.getElementById("resultado_preguntas").textContent = `Posible interpretación de complejidad: ${formula_PFA}`;}function horas_de_trabajo() {
+  const moduloActual = document.getElementById(`modulo${numeroModulo - 1}`);
+  const siguienteModulo = document.getElementById(`modulo${numeroModulo}`);
+  
+  moduloActual.classList.remove('mostrar');
+  moduloActual.classList.add('oculto');
+  
+  siguienteModulo.classList.remove('oculto');
+  siguienteModulo.classList.add('mostrar');
+
+
+  document.getElementById("resultado_preguntas").textContent = `Posible interpretación de complejidad: ${formula_PFA}`;}function horas_de_trabajo(numeroModulo) {
   let horas_por_jornada = document.getElementById("horas_por_jornada").value;
   let personas_en_equipo = document.getElementById("personas_en_equipo").value;
   let horas_desarrollo_proyecto = document.getElementById("horas_desarrollo_proyecto").value;
@@ -110,6 +132,16 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   document.getElementById("horas_por_persona").textContent = `Horas por persona: ${horas_persona}`;
   document.getElementById("horas_proyecto").textContent = `Horas del proyecto: ${duracion_proyecto}`;
   document.getElementById("duracion_proyecto").textContent = `Duracion en dias: ${duracion_meses}`;
+
+  const moduloActual = document.getElementById(`modulo${numeroModulo - 1}`);
+  const siguienteModulo = document.getElementById(`modulo${numeroModulo}`);
+  
+  moduloActual.classList.remove('mostrar');
+  moduloActual.classList.add('oculto');
+  
+  siguienteModulo.classList.remove('oculto');
+  siguienteModulo.classList.add('mostrar');
+
 }
 
 function ejecutarFunciones() {
@@ -117,53 +149,3 @@ function ejecutarFunciones() {
   preguntas();
   horas_de_trabajo();
 }
-
-
-////
-// document.addEventListener('DOMContentLoaded', function () {
-//   const questions = document.querySelectorAll('.pregunta');
-//   let currentQuestion = 0;
-
-//   function showQuestion(index) {
-//     questions.forEach((question, i) => {
-//       if (i === index) {
-//         question.style.display = 'block';
-//       } else {
-//         question.style.display = 'none';
-//       }
-//     });
-//   }
-
-//   function nextQuestion() {
-//     currentQuestion++;
-//     if (currentQuestion < questions.length) {
-//       showQuestion(currentQuestion);
-//     } else {
-//       currentQuestion = questions.length - 1;
-//     }
-//   }
-
-//   function prevQuestion() {
-//     currentQuestion--;
-//     if (currentQuestion >= 0) {
-//       showQuestion(currentQuestion);
-//     } else {
-//       currentQuestion = 0;
-//     }
-//   }
-
-//   function preguntas() {
-//     nextQuestion(); // Muestra la siguiente pregunta al hacer clic en "enviar"
-//   }
-
-//   document.getElementById('siguiente').addEventListener('click', function () {
-//     nextQuestion();
-//   });
-
-//   document.getElementById('anterior').addEventListener('click', function () {
-//     prevQuestion();
-//   });
-
-//   showQuestion(currentQuestion);
-// });
-

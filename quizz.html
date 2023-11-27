@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <a href="index.html" class="btn">Pagina Principal</a>
-    <button class="btn" onclick="empezar()">Empezar</button>
+    <button class="btn emepzar" onclick="empezar()">Empezar</button>
     <title>Calculadora de Puntos de Función</title>
 
     <link rel="stylesheet" href="quizz.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="bootstrap.min.css">
 
@@ -40,7 +41,7 @@
             <br>
             <p id="validar"></p>
             <br>
-            <button class="btn" onclick="siguienteModulo(2)">Siguiente</button>
+            <button class="btn" onclick="valorDeFuncionTotal(2);">Siguiente</button>
         </div>
         <!-- <button class="btn" onclick="valorDeFuncionTotal()">Calcular Puntos de Función</button> -->
     </div>
@@ -223,7 +224,7 @@
         </div>
 
         <button class="btn" onclick="regresarModulo(1)">Regresar</button>
-        <button class="btn" onclick="siguienteModulo(3)">Siguiente</button>
+        <button class="btn" onclick="preguntas(3);">Siguiente</button>
     </div>
         <!-- <button class="btn" onclick="preguntas()">Enviar</button><br>
         <br>
@@ -252,20 +253,21 @@
             <p id="validar2"></p>
             <br>
             <button class="btn" onclick="regresarModulo(2)">Regresar</button>
-            <button class="btn" onclick="horas_de_trabajo()">Calcular Puntos de Función</button>
-            <br>
-            <button class="btn">Empezar</button>
+            <button class="btn" onclick="horas_de_trabajo(4)">Calcular Puntos de Función</button>
         </div>
         <br>
     </div>
-    <div class="">
+</div>
+
+<div class="modulo oculto" id="modulo4">
+    <div class="contenedor page-container" id="modulo3">
         <h5>RESULTADOS</h5>
         <h5 id="resultado" >Puntos de Función:</h5>
         <h5 id="interpretacion" >Posible interpretación de complejidad:</h5>
         <h5 id="horas_por_persona" >Horas por persona:</h5>
         <h5 id="horas_proyecto" >Horas del proyecto:</h5>
         <h5 id="duracion_proyecto" >Duracion en dias:</h5> <br>
-        <button class="btn" onclick="ejecutarFunciones()">Calcular Puntos de Función</button>
+        <a href="index.html" class="btn">Pagina Principal</a>
     </div>
 </div>
 
