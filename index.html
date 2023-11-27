@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +10,19 @@
     <link rel="icon" href="img/calc.jpg">
 
 </head>
+
 <body>
     <main class="main">
         <header class="header">
-            <a href="#" class="logo">Quiz</a>
+            <a href="#" class="logo">Puntos de Función</a>
             <nav class="navbar">
                 <a href="#" class="active">Inicio</a>
                 <a href="#">Puntos de Función</a>
-                <a href="#">Quizz</a>
             </nav>
         </header>
 
-        <div class="container">
-            <section class="quiz-section">
+        <!-- <div class="container">
+            <div class="quiz-section">
                 <div class="quiz-box">
                     <h1>Quiz</h1>
                     <div class="quiz-header">
@@ -41,14 +42,232 @@
                     </div>
                     <div class="quiz-footer">
                         <span class="question-total">1 de 23 preguntas</span>
+                        <button class="before-btn">Anterior</button>
                         <button class="next-btn">Siguiente</button>
                     </div>
                 </div>
-            </section>
+                <label>Selecciona el tipo de función:</label>
+                <select id="tipo">
+                    <option value="baja">Baja</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+
+                <div>
+                    <label>Entradas externas</label>
+                    <input type="number" id="ex">
+                    <label>Salidas externas</label>
+                    <input type="number" id="sx">
+                    <label>Cosultas</label>
+                    <input type="number" id="consultas">
+                    <label>Archivos externos</label>
+                    <input type="number" id="ax">
+                    <label>Archivos internos</label>
+                    <input type="number" id="ai">
+                </div>
+                <button onclick="valorDeFuncionTotal()">Calcular Puntos de Función</button>
+                <p id="validar"></p>
+                <p id="resultado">Resultados:</p>
+
+                <div class="pregunta">
+                    <label>Pregunta 1: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 2: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 3: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P3">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 4: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P4">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 5: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P5">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 6: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P6">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 7: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P7">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 8: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P8">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 9: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P9">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 10: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P10">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 11: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P11">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 12: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P12">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 13. ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P13">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="pregunta">
+                    <label>Pregunta 14: ¿El sistema requiere respaldo y recuperación confiable?</label>
+                    <select id="P14">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <button id="anterior">Anterior</button>
+                <button id="siguiente">Siguiente</button>
+                <button onclick="preguntas()">enviar</button>
+
+                <h4 id="interpretacion">Posible interpretación de complejidad:</h4>
+
+                <div>
+                    <h2>Cálculo del esfuerzo horas/persona</h2>
+                    <div>
+                        <label>¿De cuántas horas es la jornada de trabajo?</label>
+                        <input type="number" id="horas_por_jornada"><br>
+                        <label>¿Cuántas personas hay en el equipo de trabajo?</label>
+                        <input type="number" id="personas_en_equipo"><br>
+                        <label>¿Cuántas horas al mes tardó en desarrollarse el proyecto?</label>
+                        <input type="number" id="horas_desarrollo_proyecto">
+                    </div>
+                    <button onclick="horas_de_trabajo()">enviar</button>
+
+                    <p id="validar2"></p>
+
+                    <p id="horas_por_persona">Horas por persona:</p>
+                    <p id="horas_proyecto">Horas del proyecto:</p>
+                    <p id="duracion_proyecto">Duracion en dias:</p>
+                    <button class="before-btn">Anterior</button>
+                    <button class="next-btn">Siguiente</button>
+                </div>
+            </div> -->
 
             <section class="home">
                 <div class="home-content">
-                    <h1>Puntos de Función Quiz</h1>
+                    <h1>Puntos de Función</h1>
                     <p>Calcula los puntos de función y las horas trabajadas individualmente y por equipo.</p>
                     <button class="start-btn">Empezar</button>
                 </div>
@@ -62,11 +281,12 @@
         <span class="info">2. Al final se mostrarán los resultados.</span>
         <div class="btn-group">
             <button class="info-btn exit-btn">Salir del quiz</button>
-            <a href="#" class="info-btn continue-btn">Continuar</a>
+            <a href="quizz.html" class="info-btn continue-btn">Continuar</a>
         </div>
     </div>
 
     <script src="questions.js"></script>
     <script src="index.js"></script>
 </body>
+
 </html>

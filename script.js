@@ -103,57 +103,63 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   console.log(duracion_proyecto);
   console.log(duracion_meses);
 
-  document.getElementById("horas_por_persona").textContent = `Horas por persona: ${(horas_persona)}`;
+  document.getElementById("horas_por_persona").textContent = `Horas por persona: ${horas_persona}`;
   document.getElementById("horas_proyecto").textContent = `Horas del proyecto: ${duracion_proyecto}`;
   document.getElementById("duracion_proyecto").textContent = `Duracion en dias: ${duracion_meses}`;
 }
 
+function ejecutarFunciones() {
+  valorDeFuncionTotal();
+  preguntas();
+  horas_de_trabajo();
+}
+
 
 ////
-document.addEventListener('DOMContentLoaded', function () {
-  const questions = document.querySelectorAll('.pregunta');
-  let currentQuestion = 0;
+// document.addEventListener('DOMContentLoaded', function () {
+//   const questions = document.querySelectorAll('.pregunta');
+//   let currentQuestion = 0;
 
-  function showQuestion(index) {
-    questions.forEach((question, i) => {
-      if (i === index) {
-        question.style.display = 'block';
-      } else {
-        question.style.display = 'none';
-      }
-    });
-  }
+//   function showQuestion(index) {
+//     questions.forEach((question, i) => {
+//       if (i === index) {
+//         question.style.display = 'block';
+//       } else {
+//         question.style.display = 'none';
+//       }
+//     });
+//   }
 
-  function nextQuestion() {
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
-      showQuestion(currentQuestion);
-    } else {
-      currentQuestion = questions.length - 1;
-    }
-  }
+//   function nextQuestion() {
+//     currentQuestion++;
+//     if (currentQuestion < questions.length) {
+//       showQuestion(currentQuestion);
+//     } else {
+//       currentQuestion = questions.length - 1;
+//     }
+//   }
 
-  function prevQuestion() {
-    currentQuestion--;
-    if (currentQuestion >= 0) {
-      showQuestion(currentQuestion);
-    } else {
-      currentQuestion = 0;
-    }
-  }
+//   function prevQuestion() {
+//     currentQuestion--;
+//     if (currentQuestion >= 0) {
+//       showQuestion(currentQuestion);
+//     } else {
+//       currentQuestion = 0;
+//     }
+//   }
 
-  function preguntas() {
-    nextQuestion(); // Muestra la siguiente pregunta al hacer clic en "enviar"
-  }
+//   function preguntas() {
+//     nextQuestion(); // Muestra la siguiente pregunta al hacer clic en "enviar"
+//   }
 
-  document.getElementById('siguiente').addEventListener('click', function () {
-    nextQuestion();
-  });
+//   document.getElementById('siguiente').addEventListener('click', function () {
+//     nextQuestion();
+//   });
 
-  document.getElementById('anterior').addEventListener('click', function () {
-    prevQuestion();
-  });
+//   document.getElementById('anterior').addEventListener('click', function () {
+//     prevQuestion();
+//   });
 
-  showQuestion(currentQuestion);
-});
+//   showQuestion(currentQuestion);
+// });
 

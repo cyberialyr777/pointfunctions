@@ -6,41 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Puntos de Función</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quizz.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
 
 </head>
 
 <body>
-    <h1>Calculadora de Puntos de Función</h1>
-
-    
-
+    <h1 class="titulo">Calculadora de Puntos de Función</h1>
+    <br>
+    <div class="contenedor">
         <label>Selecciona el tipo de función:</label>
-        <select id="tipo">
+        <select class="form-select mx-auto" id="tipo">
             <option value="baja">Baja</option>
             <option value="media">Media</option>
             <option value="alta">Alta</option>
         </select>
-
+        <br>
         <div>
-            <label>Entradas externas</label>
-            <input type="number" id="ex">
-            <label>Salidas externas</label>
-            <input type="number" id="sx">
-            <label>Cosultas</label>
-            <input type="number" id="consultas">
-            <label>Archivos externos</label>
-            <input type="number" id="ax">
-            <label>Archivos internos</label>
-            <input type="number" id="ai">
+            <label class="form-label">Entradas externas</label>
+            <input class="form-control mx-auto" type="number" id="ex"> <br>
+            <label class="form-label">Salidas externas</label>
+            <input class="form-control mx-auto" type="number" id="sx"> <br>
+            <label class="form-label">Cosultas</label>
+            <input class="form-control mx-auto" type="number" id="consultas"> <br>
+            <label class="form-label">Archivos externos</label>
+            <input class="form-control mx-auto" type="number" id="ax"> <br>
+            <label class="form-label">Archivos internos</label>
+            <input class="form-control mx-auto" type="number" id="ai">
+            <br>
+            <button class="before-btn">Anterior</button>
+            <button class="next-btn">Siguiente</button>
         </div>
-        <button onclick="valorDeFuncionTotal()">Calcular Puntos de Función</button>
+        <!-- <button class="btn" onclick="valorDeFuncionTotal()">Calcular Puntos de Función</button> -->
         <p id="validar"></p>
-        <p id="resultado">Resultados:</p>
-
+    </div>
+        
+        <!-- <h5 id="resultado">Resultados:</h5> -->
+        <br>
+        <br>
         <div class="pregunta">
             <label>Pregunta 1: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P1">
+            <select class="form-select" id="P1">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -52,7 +58,7 @@
 
         <div class="pregunta">
             <label>Pregunta 2: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P2">
+            <select class="form-select" id="P2">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -64,7 +70,7 @@
 
         <div class="pregunta">
             <label>Pregunta 3: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P3">
+            <select class="form-select" id="P3">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -76,7 +82,7 @@
 
         <div class="pregunta">
             <label>Pregunta 4: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P4">
+            <select class="form-select" id="P4">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -88,7 +94,7 @@
 
         <div class="pregunta">
             <label>Pregunta 5: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P5">
+            <select class="form-select" id="P5">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -100,7 +106,7 @@
 
         <div class="pregunta">
             <label>Pregunta 6: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P6">
+            <select class="form-select" id="P6">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -112,7 +118,7 @@
 
         <div class="pregunta">
             <label>Pregunta 7: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P7">
+            <select class="form-select" id="P7">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -124,7 +130,7 @@
 
         <div class="pregunta">
             <label>Pregunta 8: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P8">
+            <select class="form-select" id="P8">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -136,7 +142,7 @@
 
         <div class="pregunta">
             <label>Pregunta 9: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P9">
+            <select class="form-select" id="P9">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -148,7 +154,7 @@
 
         <div class="pregunta">
             <label>Pregunta 10: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P10">
+            <select class="form-select" id="P10">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -160,7 +166,7 @@
 
         <div class="pregunta">
             <label>Pregunta 11: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P11">
+            <select class="form-select" id="P11">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -172,7 +178,7 @@
 
         <div class="pregunta">
             <label>Pregunta 12: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P12">
+            <select class="form-select" id="P12">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -184,7 +190,7 @@
 
         <div class="pregunta">
             <label>Pregunta 13. ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P13">
+            <select class="form-select" id="P13">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -196,7 +202,7 @@
 
         <div class="pregunta">
             <label>Pregunta 14: ¿El sistema requiere respaldo y recuperación confiable?</label>
-            <select id="P14">
+            <select class="form-select" id="P14">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -206,34 +212,46 @@
             </select>
         </div>
 
-        <button id="anterior">Anterior</button>
-        <button id="siguiente">Siguiente</button>
-        <button onclick="preguntas()">enviar</button>
+        <!-- <button class="btn" onclick="preguntas()">Enviar</button><br>
+        <br>
+        <h4 id="interpretacion">Posible interpretación de complejidad:</h4> -->
 
-        <h4 id="interpretacion">Posible interpretación de complejidad:</h4>
+        <br>
+        <br>
 
         <div>
             <h2>Cálculo del esfuerzo horas/persona</h2>
+            <br>
             <div>
                 <label>¿De cuántas horas es la jornada de trabajo?</label>
-                <input type="number" id="horas_por_jornada"><br>
+                <input class="form-control" type="number" id="horas_por_jornada"><br>
                 <label>¿Cuántas personas hay en el equipo de trabajo?</label>
-                <input type="number" id="personas_en_equipo"><br>
+                <input class="form-control" type="number" id="personas_en_equipo"><br>
                 <label>¿Cuántas horas al mes tardó en desarrollarse el proyecto?</label>
-                <input type="number" id="horas_desarrollo_proyecto">
+                <input class="form-control" type="number" id="horas_desarrollo_proyecto">
             </div>
-            <button onclick="horas_de_trabajo()">enviar</button>
+            <br>
+            <!-- <button class="btn" onclick="horas_de_trabajo()">enviar</button> -->
 
             <p id="validar2"></p>
+        </div>
 
-            <p id="horas_por_persona">Horas por persona:</p>
-            <p id="horas_proyecto">Horas del proyecto:</p>
-            <p id="duracion_proyecto">Duracion en dias:</p>
+        <div class="contenedor">
+           
+
+            <h5 id="resultado">Resultados:</h5>
+            <h5 id="interpretacion">Posible interpretación de complejidad:</h5>
+            <h5 id="horas_por_persona">Horas por persona:</h5>
+            <h5 id="horas_proyecto">Horas del proyecto:</h5>
+            <h5 id="duracion_proyecto">Duracion en dias:</h5> <br>
+            <button class="btn" onclick="ejecutarFunciones()">Calcular Puntos de Función</button>
         </div>
     
 </body>
 
+<script src="bootstrap.min.js"></script>
 <script defer src="script.js"></script>
+
 
 
 </html>

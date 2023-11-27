@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #fff !important;
+    background: #09001d !important;
+}
+
+.form-control {
+    width: 30% !important;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.btn {
+    /* width: 200px !important;
+    height: 70px !important; */
+    background: #c40094 !important;
+    border: 2px solid #fff !important;
+    outline: none !important;
+    border-radius: 6px !important;
+    box-shadow: 0 0 10px #c40094 !important;
+    /* font-size: 17px !important; */
+    color: #fff !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: .5s !important;
+    text-align: center;
+    align-items: center;
+}
+
+#resultado {
+    color: #fff;
+}
+
+.form-select {
+    width: 30% !important;
+    margin-top: 1%;
+}
+
+.pregunta {
+    margin-bottom: 3%;
+}
+
+.before-btn {
+    height: 35px;
+    width: 10%;
+    background: #c40094 !important;
+    border: 2px solid #fff !important;
+    outline: none !important;
+    border-radius: 6px !important;
+    box-shadow: 0 0 10px #c40094 !important;
+    /* font-size: 17px !important; */
+    color: #fff !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: .5s !important;
+    text-align: center;
+    align-items: center;
+    margin-right: 3%;
+}
+
+.next-btn {
+    height: 35px;
+    width: 10%;
+    background: #c40094 !important;
+    border: 2px solid #fff !important;
+    outline: none !important;
+    border-radius: 6px !important;
+    box-shadow: 0 0 10px #c40094 !important;
+    /* font-size: 17px !important; */
+    color: #fff !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: .5s !important;
+    text-align: center;
+    align-items: center;
+}
+
+.contenedor {
+    align-items: center;
+    text-align: center;
+}
