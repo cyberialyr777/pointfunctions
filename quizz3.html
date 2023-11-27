@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Puntos de Función</title>
+
+    <link rel="stylesheet" href="quizz.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+</head>
+
+<body>
+<div>
+    <div class="contenedor page-container" id="modulo3">
+        <h2>Cálculo del esfuerzo horas/persona</h2>
+        <br>
+        <div>
+            <label>¿De cuántas horas es la jornada de trabajo?</label>
+            <input class="form-control mx-auto" type="number" id="horas_por_jornada"><br>
+            <label>¿Cuántas personas hay en el equipo de trabajo?</label>
+            <input class="form-control mx-auto" type="number" id="personas_en_equipo"><br>
+            <label>¿Cuántas horas al mes tardó en desarrollarse el proyecto?</label>
+            <input class="form-control mx-auto" type="number" id="horas_desarrollo_proyecto">
+            <p id="validar2"></p>
+            <br>
+            <a href="quizz2.html" class="btn">Regresar</a>
+            <button class="btn" onclick="horas_de_trabajo()">Calcular Puntos de Función</button>
+            <br>
+            <button class="btn">Empezar</button>
+        </div>
+        <br>
+    </div>
+</div>
+<div class="">
+    <h5>RESULTADOS</h5>
+    <h5 id="resultado" >Puntos de Función:</h5>
+    <h5 id="interpretacion" >Posible interpretación de complejidad:</h5>
+    <h5 id="horas_por_persona" >Horas por persona:</h5>
+    <h5 id="horas_proyecto" >Horas del proyecto:</h5>
+    <h5 id="duracion_proyecto" >Duracion en dias:</h5> <br>
+    <button class="btn" onclick="ejecutarFunciones()">Calcular Puntos de Función</button>
+</div>
+
+</body>
+
+<script src="bootstrap.min.js"></script>
+<script defer src="script.js"></script>
+</html>

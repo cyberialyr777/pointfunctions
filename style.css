@@ -10,7 +10,7 @@
 body {
     color: #fff;
     background: #09001d;
-    overflow: hidden;
+
 }
 
 .header {
@@ -195,6 +195,7 @@ body {
     background: #c40094;
     border-color: #950170;
 }
+
 /* 
 .quiz-section {
     position: relative;
