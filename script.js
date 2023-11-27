@@ -1,6 +1,8 @@
 const boton = document.getElementById("boton");
 const boton2 = document.getElementById("boton2");
 
+//aver si sale lo de arriba
+
 let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   let tipo = document.getElementById("tipo").value;
   let ex = document.getElementById("ex").value;
@@ -77,7 +79,7 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   }else if(formula_PFA >= 301 && formula_PFA <= 500){
     document.getElementById("interpretacion").textContent = 'interpretación de complejidad: se considera de complejidad dificil';
   }else{
-    document.getElementById("interpretacion").textContent = 'fuera del ragon para la interpretacion de complejidad'
+    document.getElementById("interpretacion").textContent = 'fuera del rango para la interpretacion de complejidad'
   }
 
   document.getElementById("resultado_preguntas").textContent = `Posible interpretación de complejidad: ${formula_PFA}`;}function horas_de_trabajo() {
@@ -94,6 +96,8 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal() {
   }
 
   document.getElementById('validar2').innerText = '';
+
+  console.log(formula_PFA)
 
   horas_persona = Math.round(formula_PFA / (1 / horas_por_jornada));
   duracion_proyecto = Number((horas_persona / personas_en_equipo).toFixed(2));
