@@ -110,20 +110,11 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal(numeroModul
   let horas_desarrollo_proyecto = document.getElementById("horas_desarrollo_proyecto").value;
   let horas_persona = 0, duracion_proyecto = 0, duracion_meses = 0;
 
-  if (horas_por_jornada.trim() === '' || personas_en_equipo.trim() === '' || horas_desarrollo_proyecto.trim() === '') {
-    // Mostrar un mensaje de error si algún campo está vacío
-    document.getElementById('validar2').innerText = 'Por favor, complete todos los campos.';
-    // Detener la ejecución de la función
-    return;
-  }
+  horas_persona = formula_PFA / (1 / horas_por_jornada);
 
-  document.getElementById('validar2').innerText = '';
-
-  console.log(formula_PFA)
-
-  horas_persona = Math.round(formula_PFA / (1 / horas_por_jornada));
-  duracion_proyecto = Number((horas_persona / personas_en_equipo).toFixed(2));
-  duracion_meses = (duracion_proyecto / horas_desarrollo_proyecto);
+  duracion_proyecto = horas_persona / personas_en_equipo;
+  
+  duracion_meses = duracion_proyecto / horas_desarrollo_proyecto;
 
   console.log(horas_persona);
   console.log(duracion_proyecto);
