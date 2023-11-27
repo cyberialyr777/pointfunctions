@@ -144,8 +144,4 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal(numeroModul
 
 }
 
-function ejecutarFunciones() {
-  valorDeFuncionTotal();
-  preguntas();
-  horas_de_trabajo();
-}
+
