@@ -85,13 +85,13 @@ let valorDeFuncion = 0, formula_PFA = 0;function valorDeFuncionTotal(numeroModul
   formula_PFA = Math.round(valorDeFuncion * (0.65 + 0.01 * formula_FI));
   console.log(formula_PFA);
   if(formula_PFA <= 100){
-    document.getElementById("interpretacion").textContent = 'interpretación de complejidad: se considera de complejidad sencilla';
+    document.getElementById("interpretacion").textContent = 'Interpretación de complejidad: se considera de complejidad sencilla';
   }else if(formula_PFA >= 101 && formula_PFA <= 300){
-    document.getElementById("interpretacion").textContent = 'interpretación de complejidad: se considera de complejidad media';
+    document.getElementById("interpretacion").textContent = 'Interpretación de complejidad: se considera de complejidad media';
   }else if(formula_PFA >= 301 && formula_PFA <= 500){
-    document.getElementById("interpretacion").textContent = 'interpretación de complejidad: se considera de complejidad dificil';
+    document.getElementById("interpretacion").textContent = 'Interpretación de complejidad: se considera de complejidad dificil';
   }else{
-    document.getElementById("interpretacion").textContent = 'fuera del rango para la interpretacion de complejidad'
+    document.getElementById("interpretacion").textContent = 'Fuera del rango para la interpretacion de complejidad'
   }
 
   const moduloActual = document.getElementById(`modulo${numeroModulo - 1}`);
